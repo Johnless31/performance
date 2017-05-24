@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import matplotlib.pyplot as plt
 import csv
-with open('output.csv','r') as csvfile:
+with open('result.csv','r') as csvfile:
     reader = csv.reader(csvfile)
     column = [row[4] for row in reader]
 for i in range(len(column)):
-	if column[i].isnumeric():
+	if column[i].isdigit():
 		column[i] = float(column[i])
 	else:
 		column[i] = 0.0
